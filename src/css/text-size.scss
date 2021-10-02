@@ -1,0 +1,75 @@
+// default text size
+$text-sizes: 12,16,21;
+
+$text-sizes-options: (
+    'sm': 0.8,
+    'md': 1.0,
+    'lg': 1.2,
+    'xl': 1.4,
+);
+
+@each $text-size, $ratio in $text-sizes-options{
+    [data-text-size="#{$text-size}"] {
+        @each $text-size in $text-sizes {
+            .text-size-#{$text-size} {
+                font-size: #{$text-size * $ratio}px;
+            }
+
+            /* q-inputs */
+            &.q-field--dense {
+                .q-field__control, .q-field__marginal {
+                    height: 46px * $ratio;
+                }
+
+                .q-field__label {
+                    top: (46px * $ratio) / 4;
+                    font-size: 16px * $ratio;
+                    line-height: 23px * $ratio;
+                }
+            }
+
+            &.q-field__labeled {
+                .q-field__native {
+                    line-height: 24px * $ratio;
+                }
+            }
+
+            /* q-select */
+            &.q-select {
+                .q-field__label {
+                    top: (18px * $ratio) / 4;
+                    font-size: 16px * $ratio;
+                    line-height: 23px * $ratio;
+                }
+
+                .q-field__marginal {
+                    height: 56px * $ratio;
+                }
+
+                &.q-field--auto-height.q-field__labeled .q-field__control-container {
+                    padding-top: 24px * $ratio;
+                }
+            }
+
+            /* q-tabs */
+            &.q-tab {
+                .q-tab__icon {
+                    width: 24px * $ratio;
+                    height: 24px * $ratio;
+                    font-size: 24px * $ratio;
+                }
+
+                .q-tab__label {
+                    font-size: #{$text-size * $ratio}px;
+                }
+            }
+        }
+    }
+}
+
+/* fixed size */
+@each $text-size in $text-sizes {
+    .text-size-fixed-#{$text-size} {
+        font-size: #{$text-size}px;
+    }
+}

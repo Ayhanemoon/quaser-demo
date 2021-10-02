@@ -1,0 +1,83 @@
+@use 'sass:map';
+
+$themes:(
+    'orange': (
+        primary: #FF6B6B,
+        secondary: #8B7176,
+        accent: #FFA96C,
+        dark: #011627,
+        positive: #06D6A0,
+        negative: #E71D36,
+        info: #2EC4B6,
+        warning: #FF9F1C,
+        light: #eeeeee
+    ), 
+    'blue': (
+        primary: #1976D2,
+        secondary: #26A69A,
+        accent: #9C27B0,
+        dark: #4f6d7a,
+        positive: #21BA45,
+        negative: #C10015,
+        info: #31CCEC,
+        warning: #F2C037,
+        light: #eeeeee
+    ), 
+    'pink': (
+        primary: #EF476F,
+        secondary: #85718D,
+        accent: #F78656,
+        dark: #1D1D1D,
+        positive: #d1d646,
+        negative: #f97068,
+        info: #b3dee2,
+        warning: #ffc600,
+        light: #eeeeee
+    ), 
+    'yellow': (
+        primary: #1976D2,
+        secondary: #26A69A,
+        accent: #9C27B0,
+        dark: #1D1D1D,
+        positive: #21BA45,
+        negative: #C10015,
+        info: #31CCEC,
+        warning: #F2C037,
+        light: #eeeeee
+    ),
+    'default': (
+        primary: #293241,
+        secondary: #98c1d9,
+        accent: #ee6c4d,
+        dark: #003049,
+        positive: #21BA45,
+        negative: #ef233c,
+        info: #4cc9f0,
+        warning: #fcca46,
+        light: #e0fbfc
+    )
+);
+
+@each $theme, $colors in $themes {
+    [data-theme="#{$theme}"] {
+        @each $name, $color in $colors {
+            .bg-#{$name} {
+                background: $color !important;
+            }
+            
+            .text-#{$name} {
+                color: $color !important;
+            }
+
+            @if $name == primary {
+                &.background-desktop {
+                    background: $color;
+                }
+            }
+        }
+        
+        .q-field__Control, .q-item--active {
+            color: map.get($colors, primary) !important;
+        }
+    }
+}

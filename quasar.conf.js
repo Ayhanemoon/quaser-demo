@@ -34,7 +34,7 @@ module.exports = configure(function (ctx) {
     extras: [
       // 'ionicons-v4',
       // 'mdi-v5',
-      // 'fontawesome-v5',
+      'fontawesome-v5',
       // 'eva-icons',
       // 'themify',
       // 'line-awesome',
@@ -81,7 +81,9 @@ module.exports = configure(function (ctx) {
 
     // https://v2.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
-      config: {},
+      config: {
+        dark: 'false' // or Boolean true/false
+      },
 
       // iconSet: 'material-icons', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
@@ -138,9 +140,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `Quasar App`,
-        short_name: `Quasar App`,
-        description: `A Quasar Framework app`,
+        name: `Ayhan Samimi`,
+        short_name: `Ayhanemoon`,
+        description: `Web Developer`,
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
@@ -205,7 +207,7 @@ module.exports = configure(function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'quaser-demo'
+        appId: 'ayhanemoon'
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain

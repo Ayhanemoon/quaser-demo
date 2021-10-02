@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header elevated class="bg-primary">
       <q-toolbar>
         <q-btn
           flat
@@ -12,29 +12,32 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Ayhanemoon
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>App v.1</div>
       </q-toolbar>
     </q-header>
 
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
-      bordered
+      Elevated
+      class="bg-dark"
     >
       <q-list>
         <q-item-label
           header
+          class="text-light"
         >
-          Essential Links
+          Ayhan Samimi
         </q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
+          class="text-light"
         />
       </q-list>
     </q-drawer>
@@ -50,46 +53,46 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: 'Linkedin',
+    caption: 'See my resume',
+    icon: 'fab fa-linkedin',
+    link: 'https://www.linkedin.com/in/ayhan-samimi/'
   },
   {
     title: 'Github',
-    caption: 'github.com/quasarframework',
+    caption: 'github.com/Ayhanemoon',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    link: 'https://github.com/Ayhanemoon'
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    title: 'Telegram',
+    caption: 'Send me massage!',
+    icon: 'fab fa-telegram',
+    link: 'https://telegram.com/ayhanemoon'
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    title: 'Instagram',
+    caption: '@Ayhanemoon',
+    icon: 'fab fa-instagram-square',
+    link: 'https://instagram.com/ayhanemoon'
   },
   {
     title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
+    caption: '@Ayhanemoon',
+    icon: 'fab fa-twitter-square',
+    link: 'https://twitter.com/Ayhanemoon'
   },
   {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
+    title: 'YouTube',
+    caption: '@Ayhanemoon',
+    icon: 'fab fa-youtube',
+    link: 'https://www.youtube.com/channel/UC02rzltSm1uDU4Ce2E1cdWQ'
   },
   {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
+    title: 'Website',
+    caption: 'Free Online Courses',
     icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    link: 'https://icc-aria.ir'
   }
 ];
 

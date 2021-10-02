@@ -1,0 +1,7 @@
+{
+	"appId": "com.iccaria.ayhan.app",
+	"appName": "Ayhanemoon",
+	"bundledWebRuntime": false,
+	"npmClient": "yarn",
+	"webDir": "www"
+}

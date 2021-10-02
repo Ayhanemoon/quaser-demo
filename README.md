@@ -1,4 +1,4 @@
-# Quasar App (quaser-demo)
+# Quasar App (Ayhanemoon)
 
 A Quasar Framework app
 

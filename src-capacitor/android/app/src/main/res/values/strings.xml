@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ayhanemoon</string>
+    <string name="title_activity_main">Ayhanemoon</string>
+    <string name="package_name">com.iccaria.ayhan.app</string>
+    <string name="custom_url_scheme">com.iccaria.ayhan.app</string>
+</resources>
